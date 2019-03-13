@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".fragments.EnseignantPresenceFragment"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/person1"
+        />
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <!--textview de la cni-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <TextView
+
+            style="@style/premierTextView"
+            android:layout_height="wrap_content"
+            android:text="N°Cni :"
+
+            />
+
+        <TextView
+            android:id="@+id/text_view_cni"
+            style="@style/deuxiemeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="numéro de Cni" />
+    </LinearLayout>
+
+
+    <!--textview du nom-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+
+            android:layout_height="wrap_content"
+            android:text="Noms :"
+            style="@style/premierTextView"/>
+
+        <TextView
+            android:id="@+id/text_view_nom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="noms et prénoms"
+            style="@style/deuxiemeTextView"/>
+    </LinearLayout>
+
+
+    <!--textview du numero de telephone-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="N° Tel :"
+            style="@style/premierTextView"/>
+
+        <TextView
+            android:id="@+id/text_view_telephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="numéro de téléphone"
+            style="@style/deuxiemeTextView"/>
+
+    </LinearLayout>
+            <!--textview de l'email-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:text="Email :"
+                    style="@style/premierTextView"/>
+
+                <TextView
+                    android:id="@+id/text_view_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="adresse mail"
+                    style="@style/deuxiemeTextView"/>
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <!--textview de la classe-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="Classe :"
+            style="@style/premierTextView"/>
+
+        <TextView
+            android:id="@+id/text_view_classe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="classe"
+            style="@style/deuxiemeTextView"/>
+    </LinearLayout>
+
+
+    <!--textview de cours-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="cours :"
+            style="@style/premierTextView"/>
+
+        <TextView
+            android:id="@+id/text_view_cours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="matiere"
+            style="@style/deuxiemeTextView"/>
+    </LinearLayout>
+
+
+    <!--textview de la date du jour-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="date du jour :"
+            style="@style/premierTextView"/>
+
+        <TextView
+            android:id="@+id/text_view_date_jour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date de validation"
+            style="@style/deuxiemeTextView"/>
+    </LinearLayout>
+
+
+    <!--textview de l'heure de debut-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="heure debut :"
+            style="@style/premierTextView"/>
+
+        <TextView
+            android:id="@+id/text_view_heure_debut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="heure valide debut"
+            style="@style/deuxiemeTextView"/>
+    </LinearLayout>
+
+    <!--textview de l'heure de fin-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="heure fin :"
+            style="@style/premierTextView"/>
+
+        <TextView
+            android:id="@+id/text_view_heure_fin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="heure valide fin"
+            style="@style/deuxiemeTextView"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:paddingRight="20dp"
+            android:layout_marginTop="50dp"
+
+            >
+
+            <Button
+                android:id="@+id/button_valider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VALIDER"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp"
+
+                />
+
+            <Button
+                android:id="@+id/identifier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IDENTIFIER"
+                android:layout_marginLeft="5dp"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>
