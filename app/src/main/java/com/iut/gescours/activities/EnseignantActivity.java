@@ -1,23 +1,37 @@
 package com.iut.gescours.activities;
 
+import android.content.DialogInterface;
+import android.graphics.Bitmap;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
+import android.widget.ImageView;
 
+import com.iut.gescours.AuthBfdCap;
+import com.iut.gescours.MorphoTabletFPSensorDevice;
 import com.iut.gescours.R;
 import com.iut.gescours.adapters.EnseignantPageAdapter;
+import com.morpho.morphosmart.sdk.MorphoDevice;
 
-public class EnseignantActivity extends AppCompatActivity {
+public class EnseignantActivity extends AppCompatActivity implements AuthBfdCap{
+
+
+    private MorphoTabletFPSensorDevice fpSensorCap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enseignant);
+
+
+
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
@@ -28,6 +42,17 @@ public class EnseignantActivity extends AppCompatActivity {
 
 
         this.configureViewPagerAndTabs();
+
+        fpSensorCap = new MorphoTabletFPSensorDevice(this);
+        fpSensorCap.open(this);
+
+
+        try {
+            fpSensorCap.startCapture();
+        } catch (Exception e) {
+            Log.e(this.getClass().toString(), "capture", e);
+        }
+
     }
 
     private void configureViewPagerAndTabs(){
@@ -54,4 +79,10 @@ public class EnseignantActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_tool_bar, menu );
         return true;
     }
+
+    @Override
+    public void updateImageView(ImageView imgPreview, Bitmap previewBitmap, String message, boolean flagComplete, int captureError) {
+
+    }
+
 }

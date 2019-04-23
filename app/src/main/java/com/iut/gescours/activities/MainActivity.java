@@ -8,13 +8,19 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.iut.gescours.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mButtonEnseignant;
-    private Button mButtonEtudiant;
+//    private Button mButtonEnseignant;
+//    private Button mButtonEtudiant;
+
+    private ImageButton mImageButtonEtudiant;
+    private ImageButton mImageButtonEnseignant;
+
 
 
     @Override
@@ -24,18 +30,20 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
-        mButtonEnseignant = (Button) findViewById(R.id.button_enseignant);
-        mButtonEtudiant = (Button) findViewById(R.id.button_etudiant);
+        mImageButtonEtudiant = (ImageButton) findViewById(R.id.image_etudiant);
+        mImageButtonEnseignant = (ImageButton) findViewById(R.id.image_professeur);
 
 
-        mButtonEnseignant.setOnClickListener(new View.OnClickListener() {
+
+
+        mImageButtonEnseignant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 launchEnseignantActivity();
             }
         });
 
-        mButtonEtudiant.setOnClickListener(new View.OnClickListener() {
+        mImageButtonEtudiant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 launchEtudiantActivity();

@@ -33,18 +33,21 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:background="@drawable/etudiant2"/>
+        <ImageButton
+            android:id="@+id/image_etudiant"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:srcCompat="@drawable/schooletudiant"
+            android:scaleType="fitXY"
+            android:background="?android:attr/selectableItemBackground"/>
 
-        <Button
-            android:id="@+id/button_etudiant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/etudiant"
-            android:textSize="30sp"
-            android:textStyle="bold"/>
+        <!--<Button-->
+            <!--android:id="@+id/button_etudiant"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/etudiant"-->
+            <!--android:textSize="30sp"-->
+            <!--android:textStyle="bold"/>-->
     </LinearLayout>
 
 
@@ -56,20 +59,23 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:background="@drawable/professeur2"/>
+        <ImageButton
+            android:id="@+id/image_professeur"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:srcCompat="@drawable/schooldir"
+            android:scaleType="fitXY"
+            android:background="?android:attr/selectableItemBackground"/>
 
-        <Button
-            android:id="@+id/button_enseignant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/enseignant"
-            android:textSize="30sp"
-            android:textStyle="bold"
+        <!--<Button-->
+            <!--android:id="@+id/button_enseignant"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/enseignant"-->
+            <!--android:textSize="30sp"-->
+            <!--android:textStyle="bold"-->
 
-            />
+            <!--/>-->
 
 
 
